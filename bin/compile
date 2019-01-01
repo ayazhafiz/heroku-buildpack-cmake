@@ -38,13 +38,8 @@ echo "Testing binary" | indent
 $BUILD_DIR/.heroku/cmake/bin/cmake --version
 
 echo "Set C++ compiler" | indent
-export MAGICK_PATH="$(find / -type f -name "Magick++.h" -printf '%h\n' -quit)"
-ls -l "$MAGICK_PATH"
-cd "$MAGICK_PATH"
-cd ../..
-export MAGICK_BASE="$(pwd)"
-export CXX="`which g++` -I$MAGICK_PATH -I$MAGICK_BASE"
-export CXXFLAGS="-isystem\ $MAGICK_PATH -isystem\ $MAGICK_BASE"
+ls -l "$BUILD_DIR/.profile.d"
+source "$BUILD_DIR/.profile.d/imagemagick.sh"
 
 echo "Running cmake build scipts" | indent
 cd "$BUILD_DIR"
