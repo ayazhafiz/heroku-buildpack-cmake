@@ -39,7 +39,7 @@ $BUILD_DIR/.heroku/cmake/bin/cmake --version
 
 echo "Set C++ compiler" | indent
 ls -l "$BUILD_DIR/.profile.d"
-source "$BUILD_DIR/.profile.d/imagemagick.sh"
+bash "$BUILD_DIR/.profile.d/imagemagick.sh"
 
 echo "Running cmake build scipts" | indent
 cd "$BUILD_DIR"
