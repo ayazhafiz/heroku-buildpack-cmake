@@ -38,7 +38,7 @@ echo "Testing binary" | indent
 $BUILD_DIR/.heroku/cmake/bin/cmake --version
 
 echo "Set C++ compiler" | indent
-export CXX="`which g++` -I/$MAGICK_CONFIGURE_PATH/include/ImageMagick-6"		
+export CXX="`which g++` -I/app/vendor/imagemagick/include/ImageMagick-6"		
   
  echo "CXX=$CXX" | indent | indent
 
