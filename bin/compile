@@ -64,4 +64,4 @@ mv $BUILD_DIR/.heroku/cmake/bin/cmake /usr/local/bin
 
 echo "Running cmake build scipts" | indent
 cd "$BUILD_DIR"
-./cmake_build
+./cmake_build.sh
