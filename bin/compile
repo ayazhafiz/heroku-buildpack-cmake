@@ -63,3 +63,7 @@ echo "Running cmake build scipts" | indent
 cd "$BUILD_DIR"
 chmod u+x ./cmake_build.sh
 CMAKE=$BUILD_DIR/.heroku/cmake/bin/cmake ./cmake_build.sh
+
+echo "Set C++ compiler" | indent
+path=`echo "$INCLUDE_PATH" | cut -d : -f 1`
+export CXX="`which g++` -I$path/ImageMagick"
