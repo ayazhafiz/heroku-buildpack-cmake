@@ -60,8 +60,10 @@ echo "Testing binary" | indent
 $BUILD_DIR/.heroku/cmake/bin/cmake --version
 
 echo "Set C++ compiler" | indent
-path=`echo "$INCLUDE_PATH" | cut -d : -f 1`
-export CXX="`which g++` -I$path/ImageMagick"
+# path=`echo "$INCLUDE_PATH" | cut -d : -f 1`
+export CXX="`which g++` -I$PATH/ImageMagick"
+
+echo "CXX=$CXX" | indent | indent
 
 echo "Running cmake build scipts" | indent
 cd "$BUILD_DIR"
