@@ -59,9 +59,6 @@ echo "export PATH=\"\$PATH:$BUILD_DIR/.heroku/cmake/bin\"" > $BP_DIR/export
 echo "Testing binary" | indent
 $BUILD_DIR/.heroku/cmake/bin/cmake --version
 
-echo "Placing cmake binary in bin" | indent
-mv $BUILD_DIR/.heroku/cmake/bin/cmake /usr/local/bin
-
 echo "Running cmake build scipts" | indent
 cd "$BUILD_DIR"
-./cmake_build.sh
+CMAKE=$BUILD_DIR/.heroku/cmake/bin/cmake ./cmake_build.sh
