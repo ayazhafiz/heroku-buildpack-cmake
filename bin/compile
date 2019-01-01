@@ -61,4 +61,5 @@ $BUILD_DIR/.heroku/cmake/bin/cmake --version
 
 echo "Running cmake build scipts" | indent
 cd "$BUILD_DIR"
+chmod u+x ./cmake_build.sh
 CMAKE=$BUILD_DIR/.heroku/cmake/bin/cmake ./cmake_build.sh
